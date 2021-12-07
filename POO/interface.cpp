@@ -86,10 +86,10 @@ void interface::fill(){
         ptr->zona = zona;
         flag=0;
     }
-    for (ptr = this->mapa.begin(); ptr < mapa.end(); ptr++){
-        
-        cout << ptr->zona << endl;
-    }
+//    for (ptr = this->mapa.begin(); ptr < mapa.end(); ptr++){
+//
+//        cout << ptr->zona << endl;
+//    }
     
 }
 
@@ -105,10 +105,10 @@ void interface::coor(){
                 ptr2++;
             }
         }
-    for (ptr2 = this->mapa.begin(); ptr2 < mapa.end(); ptr2++){
-        
-        cout << "x: " <<ptr2->x << " y: " << ptr2->y  << endl;
-    }
+//    for (ptr2 = this->mapa.begin(); ptr2 < mapa.end(); ptr2++){
+//
+//        cout << "x: " <<ptr2->x << " y: " << ptr2->y  << endl;
+//    }
     
 }
 

@@ -25,7 +25,7 @@ interface::~interface(){}
 
 void interface::init(){
     int i, tam;
-    cout << "Introduza nº de linhas e colunas" << endl;
+    cout << "Introduza numero de linhas e colunas" << endl;
     cin >> controlo.nv >> controlo.nh;
     tam = controlo.nv * controlo.nh;
     //cout << controlo.nv << "..." << controlo.nh << endl;

@@ -22,7 +22,9 @@ jogada::jogada(){
     
 }
 
-jogada::~jogada();
+jogada::~jogada(){
+
+}
 
 
 void jogada::joga1(string comm, string p1, string p2, string p3, vector<ilha> *arr){

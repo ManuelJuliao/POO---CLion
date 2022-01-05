@@ -16,13 +16,15 @@
 #include <vector>
 #include "jogada.h"
 
-typedef struct controlo {
+typedef struct controlo {  //qunatidade de zonas e edificios
     int mont;
     int des;
     int pas;
     int flor;
     int pant;
     int zonX;
+    int minaf;
+
     float nh, nv;// nº horizontal e nº vertical
 } control;
 

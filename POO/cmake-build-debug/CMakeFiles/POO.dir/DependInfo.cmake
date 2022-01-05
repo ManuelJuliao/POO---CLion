@@ -4,12 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/GitHub/POO---CLion/POO/ilha.cpp" "C:/GitHub/POO---CLion/POO/cmake-build-debug/CMakeFiles/POO.dir/ilha.cpp.obj"
-  "C:/GitHub/POO---CLion/POO/interface.cpp" "C:/GitHub/POO---CLion/POO/cmake-build-debug/CMakeFiles/POO.dir/interface.cpp.obj"
-  "C:/GitHub/POO---CLion/POO/jogada.cpp" "C:/GitHub/POO---CLion/POO/cmake-build-debug/CMakeFiles/POO.dir/jogada.cpp.obj"
-  "C:/GitHub/POO---CLion/POO/main.cpp" "C:/GitHub/POO---CLion/POO/cmake-build-debug/CMakeFiles/POO.dir/main.cpp.obj"
+  "/Users/manueljuliao/Desktop/POO - CLion/POO/ilha.cpp" "/Users/manueljuliao/Desktop/POO - CLion/POO/cmake-build-debug/CMakeFiles/POO.dir/ilha.cpp.o"
+  "/Users/manueljuliao/Desktop/POO - CLion/POO/interface.cpp" "/Users/manueljuliao/Desktop/POO - CLion/POO/cmake-build-debug/CMakeFiles/POO.dir/interface.cpp.o"
+  "/Users/manueljuliao/Desktop/POO - CLion/POO/jogada.cpp" "/Users/manueljuliao/Desktop/POO - CLion/POO/cmake-build-debug/CMakeFiles/POO.dir/jogada.cpp.o"
+  "/Users/manueljuliao/Desktop/POO - CLion/POO/main.cpp" "/Users/manueljuliao/Desktop/POO - CLion/POO/cmake-build-debug/CMakeFiles/POO.dir/main.cpp.o"
+  "/Users/manueljuliao/Desktop/POO - CLion/POO/player.cpp" "/Users/manueljuliao/Desktop/POO - CLion/POO/cmake-build-debug/CMakeFiles/POO.dir/player.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

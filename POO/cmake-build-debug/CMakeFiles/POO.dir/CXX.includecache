@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/GitHub/POO---CLion/POO/ilha.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/ilha.h
 string
 -
 stdio.h
@@ -16,9 +16,9 @@ iostream
 vector
 -
 
-C:/GitHub/POO---CLion/POO/interface.cpp
+/Users/manueljuliao/Desktop/POO - CLion/POO/interface.cpp
 interface.h
-C:/GitHub/POO---CLion/POO/interface.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/interface.h
 vector
 -
 stdlib.h
@@ -28,13 +28,15 @@ string
 math.h
 -
 jogada.h
-C:/GitHub/POO---CLion/POO/jogada.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/jogada.h
 iostream
 -
 sstream
 -
+player.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/player.h
 
-C:/GitHub/POO---CLion/POO/interface.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/interface.h
 string
 -
 stdio.h
@@ -42,17 +44,57 @@ stdio.h
 iostream
 -
 ilha.h
-C:/GitHub/POO---CLion/POO/ilha.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/ilha.h
 vector
 -
 jogada.h
-C:/GitHub/POO---CLion/POO/jogada.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/jogada.h
 
-C:/GitHub/POO---CLion/POO/jogada.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/jogada.cpp
+string
+-
+jogada.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/jogada.h
+stdio.h
+-
+ilha.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/ilha.h
+interface.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/interface.h
+iostream
+-
+fstream
+-
+sstream
+-
+
+/Users/manueljuliao/Desktop/POO - CLion/POO/jogada.h
 stdio.h
 -
 string
 -
 ilha.h
-C:/GitHub/POO---CLion/POO/ilha.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/ilha.h
+
+/Users/manueljuliao/Desktop/POO - CLion/POO/main.cpp
+iostream
+-
+ilha.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/ilha.h
+interface.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/interface.h
+player.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/player.h
+
+/Users/manueljuliao/Desktop/POO - CLion/POO/player.cpp
+player.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/player.h
+interface.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/interface.h
+ilha.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/ilha.h
+
+/Users/manueljuliao/Desktop/POO - CLion/POO/player.h
+ilha.h
+/Users/manueljuliao/Desktop/POO - CLion/POO/ilha.h
 

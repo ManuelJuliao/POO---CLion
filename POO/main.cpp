@@ -8,11 +8,9 @@
 #include <iostream>
 #include "ilha.h"
 #include "interface.h"
+#include "player.h"
 using namespace std;
 
-float sum(float a, float b);
-void introduceMe(string name, int age);
-void celebrateBirthday(int* age2);
 
 int main() {
     interface anInterface;
@@ -23,4 +21,5 @@ int main() {
     anInterface.coor();
     anInterface.print();
     anInterface.menu();
+    return 0;
 }

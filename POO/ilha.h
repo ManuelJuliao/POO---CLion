@@ -24,7 +24,7 @@ public:
     int x,y;
     string zona;
     string edif;
-    char trab[50];
+    char trab[50]; //string trabalhadores
     int num_trab;
     ilha ();
     ~ilha();

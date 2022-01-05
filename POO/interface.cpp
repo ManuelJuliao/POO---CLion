@@ -14,6 +14,7 @@
 #include "jogada.h"
 #include <iostream>
 #include <sstream>
+#include "player.h"
 
 using namespace std;
 
@@ -23,7 +24,7 @@ interface::interface(){}
 interface::~interface(){}
 
 
-void interface::init(){
+void interface::init(){ //inicializa ilha [vetor] com o tamanho indicado pelo utilizador
     int i, tam;
     cout << "Introduza numero de linhas e colunas" << endl;
     cin >> controlo.nv >> controlo.nh;
@@ -33,7 +34,7 @@ void interface::init(){
         this->mapa.push_back (ilha());
     }
 }
-void interface::fill(){
+void interface::fill(){ //fill vetor com tipos de zona equilibrados
     int flag = 0;
     float thres = ceil((controlo.nh*controlo.nv)/6);
     string zona;
@@ -93,7 +94,7 @@ void interface::fill(){
     
 }
 
-void interface::coor(){
+void interface::coor(){ // fill vetor com coordenadas (x,y)
     int i=1;
     int j=1;
     vector<ilha>::iterator ptr2;
@@ -105,6 +106,7 @@ void interface::coor(){
                 ptr2++;
             }
         }
+        // funcao teste: imprime as coordenadas de cada posicao do vetor
 //    for (ptr2 = this->mapa.begin(); ptr2 < mapa.end(); ptr2++){
 //
 //        cout << "x: " <<ptr2->x << " y: " << ptr2->y  << endl;
@@ -113,7 +115,7 @@ void interface::coor(){
 }
 
 
-void interface::print(){
+void interface::print(){  // imprime tabuleiro
     int aux, cont=0;
     string straux;
     vector<ilha>::iterator ptr3;
@@ -176,9 +178,10 @@ void interface::menu(){
     string fullcomm; //input completo
     string comm; //ordem
     string p1, p2, p3; //parametros
-    string dummy;
+    string dummy; //condicao de continuacao
     int jog;
     jogada jogada1;
+    player player1;
     cout << endl << "Menu inicial:" << endl;
     do{
         cout << "Ordem: ";
@@ -242,9 +245,12 @@ void interface::menu(){
             default:
                 break;
         }
+        player1.calcprod(&mapa, player1);
+        if(comm == "sair")
+            break;
         print();
         cout << endl <<  "Continuar? [y/n]" << endl;
         cin >> dummy;
-    } while (comm != "sair") ;
-    
+    }while (comm != "sair");
+
 }

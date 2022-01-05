@@ -163,8 +163,8 @@ void jogada::joga6(string comm, string p1, string p2, vector<ilha> *arr){
 void jogada::joga7(string comm, string p1, vector<ilha> *arr){
     // oper | len | miner
     char play;
-    if(p1 == "o"){
-        play = 'O';
+    if(p1 == "miner"){
+        play = 'M';
     }
     
     vector<ilha>::iterator ptr;
@@ -182,11 +182,12 @@ void jogada::joga7(string comm, string p1, vector<ilha> *arr){
         }
     
     }
+    cont_id++;
     //cout << "Jogada 7" << endl;
 
 }
 void jogada::joga8(string comm, string p1, string p2, vector<ilha> *arr){
-    interface anInterface;
+    //interface anInterface;
     vector<ilha>::iterator ptr;
     
     if(p1.empty() || p2.empty()){

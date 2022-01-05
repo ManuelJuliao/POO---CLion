@@ -19,6 +19,7 @@ public:
     string comm;
     string comm_sp;
     int p1,p2;
+    static int cont_id;
     
     
     void joga1(string comm, string p1, string p2, string p3, vector<ilha> *arr); // construir

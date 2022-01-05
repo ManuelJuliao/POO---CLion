@@ -1,12 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/POO.dir/ilha.cpp.obj"
-  "CMakeFiles/POO.dir/interface.cpp.obj"
-  "CMakeFiles/POO.dir/jogada.cpp.obj"
-  "CMakeFiles/POO.dir/main.cpp.obj"
-  "POO.exe"
-  "POO.exe.manifest"
+  "CMakeFiles/POO.dir/ilha.cpp.o"
+  "CMakeFiles/POO.dir/interface.cpp.o"
+  "CMakeFiles/POO.dir/jogada.cpp.o"
+  "CMakeFiles/POO.dir/main.cpp.o"
+  "CMakeFiles/POO.dir/player.cpp.o"
+  "POO"
   "POO.pdb"
-  "libPOO.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

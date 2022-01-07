@@ -19,7 +19,7 @@ using namespace std;
 
 
 jogada::jogada(){
-    
+    this->cont_id = 0;
 }
 
 jogada::~jogada(){

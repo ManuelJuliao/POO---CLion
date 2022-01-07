@@ -10,6 +10,7 @@
 
 class player {
 public :             // variaveis e devidas producoes por ronda
+    int money;
     int iron;
     int ironprod;
     int steel;
@@ -22,7 +23,8 @@ public :             // variaveis e devidas producoes por ronda
     int energy;
     int energyprod;
 
-    static void calcprod(vector<ilha> *arr, player player1);
+    static void calcprod(vector<ilha> *arr, player *player1);
+    static void prod(player *player1);
 
     player();
     ~player();

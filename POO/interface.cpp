@@ -107,7 +107,7 @@ void interface::coor(){ // fill vetor com coordenadas (x,y)
             }
         }
         // funcao teste: imprime as coordenadas de cada posicao do vetor
-//    for (ptr2 = this->mapa.begin(); ptr2 < mapa.end(); ptr2++){
+//     for (ptr2 = this->mapa.begin(); ptr2 < mapa.end(); ptr2++){
 //
 //        cout << "x: " <<ptr2->x << " y: " << ptr2->y  << endl;
 //    }
@@ -179,11 +179,15 @@ void interface::menu(){
     string comm; //ordem
     string p1, p2, p3; //parametros
     string dummy; //condicao de continuacao
-    int jog;
+    int jog; // switch
     jogada jogada1;
     player player1;
     cout << endl << "Menu inicial:" << endl;
     do{
+        day++;
+        if(day > 1){
+            dawn(&mapa, &player1); // amanhecer
+        }
         cout << "Ordem: ";
         cin.clear();
         getline(cin >> ws, fullcomm);
@@ -245,7 +249,7 @@ void interface::menu(){
             default:
                 break;
         }
-        player1.calcprod(&mapa, player1);
+        //player1.calcprod(&mapa, &player1);
         if(comm == "sair")
             break;
         print();
@@ -254,3 +258,13 @@ void interface::menu(){
     }while (comm != "sair");
 
 }
+
+void interface::dawn(vector<ilha> *mapa, player *player1) {
+    player1->calcprod(mapa, player1);
+    player1->prod(player1);
+    cout << endl << "Dia: " << day << endl << "Dinheiro: " <<player1->money << endl << "Ferro: " << player1->iron << endl << "Barras de aco: " << player1->steel << endl << "Carvao: " << player1->coal << endl << "Madeira: " << player1->wood << endl << "Vigas de madeira: " << player1->woodbeams << endl << "Eletricidade: " << player1->energy << endl;
+    //amanhecer -> update recursos etc
+
+}
+
+

@@ -15,6 +15,7 @@
 #include "ilha.h"
 #include <vector>
 #include "jogada.h"
+#include "player.h"
 
 typedef struct controlo {  //qunatidade de zonas e edificios
     int mont;
@@ -32,12 +33,14 @@ class interface {
 public:
     vector<ilha> mapa;
     control controlo = {0};
+    int day=0;
     
 void init();
 void fill();
 void coor();
 void print();
 void menu();
+void dawn(vector<ilha> *mapa, player *player1);
 
 interface();
 ~interface();

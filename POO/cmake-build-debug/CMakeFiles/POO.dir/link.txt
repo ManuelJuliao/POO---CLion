@@ -1,1 +1,3 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/POO.dir/main.cpp.o CMakeFiles/POO.dir/ilha.cpp.o CMakeFiles/POO.dir/interface.cpp.o CMakeFiles/POO.dir/jogada.cpp.o CMakeFiles/POO.dir/player.cpp.o -o POO 
+"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\POO.dir/objects.a
+C:\MinGW\bin\ar.exe qc CMakeFiles\POO.dir/objects.a @CMakeFiles\POO.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\POO.dir/objects.a -Wl,--no-whole-archive -o POO.exe -Wl,--out-implib,libPOO.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\POO.dir\linklibs.rsp

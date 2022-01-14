@@ -80,31 +80,49 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/GitHub/POO---CLion/POO/ilha.cpp">
+		<Unit filename="C:/GitHub/POO---CLion/POO/Building.cpp">
 			<Option target="POO"/>
 		</Unit>
-		<Unit filename="C:/GitHub/POO---CLion/POO/ilha.h">
+		<Unit filename="C:/GitHub/POO---CLion/POO/Building.h">
 			<Option target="POO"/>
 		</Unit>
-		<Unit filename="C:/GitHub/POO---CLion/POO/interface.cpp">
+		<Unit filename="C:/GitHub/POO---CLion/POO/Finance.cpp">
 			<Option target="POO"/>
 		</Unit>
-		<Unit filename="C:/GitHub/POO---CLion/POO/interface.h">
+		<Unit filename="C:/GitHub/POO---CLion/POO/Finance.h">
 			<Option target="POO"/>
 		</Unit>
-		<Unit filename="C:/GitHub/POO---CLion/POO/jogada.cpp">
+		<Unit filename="C:/GitHub/POO---CLion/POO/Ilha.cpp">
 			<Option target="POO"/>
 		</Unit>
-		<Unit filename="C:/GitHub/POO---CLion/POO/jogada.h">
+		<Unit filename="C:/GitHub/POO---CLion/POO/Ilha.h">
+			<Option target="POO"/>
+		</Unit>
+		<Unit filename="C:/GitHub/POO---CLion/POO/Interface.cpp">
+			<Option target="POO"/>
+		</Unit>
+		<Unit filename="C:/GitHub/POO---CLion/POO/Interface.h">
+			<Option target="POO"/>
+		</Unit>
+		<Unit filename="C:/GitHub/POO---CLion/POO/Jogada.cpp">
+			<Option target="POO"/>
+		</Unit>
+		<Unit filename="C:/GitHub/POO---CLion/POO/Jogada.h">
+			<Option target="POO"/>
+		</Unit>
+		<Unit filename="C:/GitHub/POO---CLion/POO/Player.cpp">
+			<Option target="POO"/>
+		</Unit>
+		<Unit filename="C:/GitHub/POO---CLion/POO/Player.h">
+			<Option target="POO"/>
+		</Unit>
+		<Unit filename="C:/GitHub/POO---CLion/POO/Worker.cpp">
+			<Option target="POO"/>
+		</Unit>
+		<Unit filename="C:/GitHub/POO---CLion/POO/Worker.h">
 			<Option target="POO"/>
 		</Unit>
 		<Unit filename="C:/GitHub/POO---CLion/POO/main.cpp">
-			<Option target="POO"/>
-		</Unit>
-		<Unit filename="C:/GitHub/POO---CLion/POO/player.cpp">
-			<Option target="POO"/>
-		</Unit>
-		<Unit filename="C:/GitHub/POO---CLion/POO/player.h">
 			<Option target="POO"/>
 		</Unit>
 		<Unit filename="C:/GitHub/POO---CLion/POO/CMakeLists.txt">

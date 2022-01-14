@@ -1,5 +1,5 @@
 //
-//  ilha.cpp
+//  Ilha.cpp
 //  POO
 //
 //  Created by Manuel Juliao on 22/11/2021.
@@ -7,11 +7,11 @@
 
 #include <vector>
 #include<iterator>
-#include "ilha.h"
+#include "Ilha.h"
 using namespace std;
 
 
-ilha::ilha() {
+Ilha::Ilha() {
     this->zona = "    ";
     this->edif= "    ";
     this->num_trab= 0;
@@ -21,6 +21,6 @@ ilha::ilha() {
     
 }
 
-ilha::~ilha(){
+Ilha::~Ilha(){
     
 }

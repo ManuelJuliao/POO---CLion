@@ -12,10 +12,12 @@
 #include <string>
 #include <stdio.h>
 #include <iostream>
-#include "ilha.h"
+#include "Ilha.h"
 #include <vector>
-#include "jogada.h"
-#include "player.h"
+#include "Jogada.h"
+#include "Player.h"
+#include "Worker.h"
+#include "Building.h"
 
 typedef struct controlo {  //qunatidade de zonas e edificios
     int mont;
@@ -25,25 +27,33 @@ typedef struct controlo {  //qunatidade de zonas e edificios
     int pant;
     int zonX;
     int minaf;
+    int minc;
+    int central;
+    int bat;
+    int fund;
+    int edx;
+
 
     float nh, nv;// nº horizontal e nº vertical
 } control;
 
-class interface {
+class Interface {
 public:
-    vector<ilha> mapa;
+    vector<Ilha> mapa;
+    vector<Worker> workers;
+    vector<Building> buildings;
     control controlo = {0};
-    int day=0;
+    int day=1;
     
 void init();
 void fill();
 void coor();
 void print();
 void menu();
-void dawn(vector<ilha> *mapa, player *player1);
+void night(vector<Ilha> *mapa, Player *player1, vector<Worker> *workers,vector<Building> *buildings);
 
-interface();
-~interface();
+Interface();
+~Interface();
     
 };
 

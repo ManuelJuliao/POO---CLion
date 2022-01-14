@@ -128,77 +128,173 @@ POO/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/build
 .PHONY : POO/fast
 
-ilha.obj: ilha.cpp.obj
-.PHONY : ilha.obj
+Building.obj: Building.cpp.obj
+.PHONY : Building.obj
 
 # target to build an object file
-ilha.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/ilha.cpp.obj
-.PHONY : ilha.cpp.obj
+Building.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Building.cpp.obj
+.PHONY : Building.cpp.obj
 
-ilha.i: ilha.cpp.i
-.PHONY : ilha.i
+Building.i: Building.cpp.i
+.PHONY : Building.i
 
 # target to preprocess a source file
-ilha.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/ilha.cpp.i
-.PHONY : ilha.cpp.i
+Building.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Building.cpp.i
+.PHONY : Building.cpp.i
 
-ilha.s: ilha.cpp.s
-.PHONY : ilha.s
+Building.s: Building.cpp.s
+.PHONY : Building.s
 
 # target to generate assembly for a file
-ilha.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/ilha.cpp.s
-.PHONY : ilha.cpp.s
+Building.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Building.cpp.s
+.PHONY : Building.cpp.s
 
-interface.obj: interface.cpp.obj
-.PHONY : interface.obj
+Finance.obj: Finance.cpp.obj
+.PHONY : Finance.obj
 
 # target to build an object file
-interface.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/interface.cpp.obj
-.PHONY : interface.cpp.obj
+Finance.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Finance.cpp.obj
+.PHONY : Finance.cpp.obj
 
-interface.i: interface.cpp.i
-.PHONY : interface.i
+Finance.i: Finance.cpp.i
+.PHONY : Finance.i
 
 # target to preprocess a source file
-interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/interface.cpp.i
-.PHONY : interface.cpp.i
+Finance.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Finance.cpp.i
+.PHONY : Finance.cpp.i
 
-interface.s: interface.cpp.s
-.PHONY : interface.s
+Finance.s: Finance.cpp.s
+.PHONY : Finance.s
 
 # target to generate assembly for a file
-interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/interface.cpp.s
-.PHONY : interface.cpp.s
+Finance.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Finance.cpp.s
+.PHONY : Finance.cpp.s
 
-jogada.obj: jogada.cpp.obj
-.PHONY : jogada.obj
+Ilha.obj: Ilha.cpp.obj
+.PHONY : Ilha.obj
 
 # target to build an object file
-jogada.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/jogada.cpp.obj
-.PHONY : jogada.cpp.obj
+Ilha.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Ilha.cpp.obj
+.PHONY : Ilha.cpp.obj
 
-jogada.i: jogada.cpp.i
-.PHONY : jogada.i
+Ilha.i: Ilha.cpp.i
+.PHONY : Ilha.i
 
 # target to preprocess a source file
-jogada.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/jogada.cpp.i
-.PHONY : jogada.cpp.i
+Ilha.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Ilha.cpp.i
+.PHONY : Ilha.cpp.i
 
-jogada.s: jogada.cpp.s
-.PHONY : jogada.s
+Ilha.s: Ilha.cpp.s
+.PHONY : Ilha.s
 
 # target to generate assembly for a file
-jogada.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/jogada.cpp.s
-.PHONY : jogada.cpp.s
+Ilha.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Ilha.cpp.s
+.PHONY : Ilha.cpp.s
+
+Interface.obj: Interface.cpp.obj
+.PHONY : Interface.obj
+
+# target to build an object file
+Interface.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Interface.cpp.obj
+.PHONY : Interface.cpp.obj
+
+Interface.i: Interface.cpp.i
+.PHONY : Interface.i
+
+# target to preprocess a source file
+Interface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Interface.cpp.i
+.PHONY : Interface.cpp.i
+
+Interface.s: Interface.cpp.s
+.PHONY : Interface.s
+
+# target to generate assembly for a file
+Interface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Interface.cpp.s
+.PHONY : Interface.cpp.s
+
+Jogada.obj: Jogada.cpp.obj
+.PHONY : Jogada.obj
+
+# target to build an object file
+Jogada.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Jogada.cpp.obj
+.PHONY : Jogada.cpp.obj
+
+Jogada.i: Jogada.cpp.i
+.PHONY : Jogada.i
+
+# target to preprocess a source file
+Jogada.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Jogada.cpp.i
+.PHONY : Jogada.cpp.i
+
+Jogada.s: Jogada.cpp.s
+.PHONY : Jogada.s
+
+# target to generate assembly for a file
+Jogada.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Jogada.cpp.s
+.PHONY : Jogada.cpp.s
+
+Player.obj: Player.cpp.obj
+.PHONY : Player.obj
+
+# target to build an object file
+Player.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Player.cpp.obj
+.PHONY : Player.cpp.obj
+
+Player.i: Player.cpp.i
+.PHONY : Player.i
+
+# target to preprocess a source file
+Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Player.cpp.i
+.PHONY : Player.cpp.i
+
+Player.s: Player.cpp.s
+.PHONY : Player.s
+
+# target to generate assembly for a file
+Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Player.cpp.s
+.PHONY : Player.cpp.s
+
+Worker.obj: Worker.cpp.obj
+.PHONY : Worker.obj
+
+# target to build an object file
+Worker.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Worker.cpp.obj
+.PHONY : Worker.cpp.obj
+
+Worker.i: Worker.cpp.i
+.PHONY : Worker.i
+
+# target to preprocess a source file
+Worker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Worker.cpp.i
+.PHONY : Worker.cpp.i
+
+Worker.s: Worker.cpp.s
+.PHONY : Worker.s
+
+# target to generate assembly for a file
+Worker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/Worker.cpp.s
+.PHONY : Worker.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -224,30 +320,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-player.obj: player.cpp.obj
-.PHONY : player.obj
-
-# target to build an object file
-player.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/player.cpp.obj
-.PHONY : player.cpp.obj
-
-player.i: player.cpp.i
-.PHONY : player.i
-
-# target to preprocess a source file
-player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/player.cpp.i
-.PHONY : player.cpp.i
-
-player.s: player.cpp.s
-.PHONY : player.s
-
-# target to generate assembly for a file
-player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\POO.dir\build.make CMakeFiles/POO.dir/player.cpp.s
-.PHONY : player.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -257,21 +329,30 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... POO
-	@echo ... ilha.obj
-	@echo ... ilha.i
-	@echo ... ilha.s
-	@echo ... interface.obj
-	@echo ... interface.i
-	@echo ... interface.s
-	@echo ... jogada.obj
-	@echo ... jogada.i
-	@echo ... jogada.s
+	@echo ... Building.obj
+	@echo ... Building.i
+	@echo ... Building.s
+	@echo ... Finance.obj
+	@echo ... Finance.i
+	@echo ... Finance.s
+	@echo ... Ilha.obj
+	@echo ... Ilha.i
+	@echo ... Ilha.s
+	@echo ... Interface.obj
+	@echo ... Interface.i
+	@echo ... Interface.s
+	@echo ... Jogada.obj
+	@echo ... Jogada.i
+	@echo ... Jogada.s
+	@echo ... Player.obj
+	@echo ... Player.i
+	@echo ... Player.s
+	@echo ... Worker.obj
+	@echo ... Worker.i
+	@echo ... Worker.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... player.obj
-	@echo ... player.i
-	@echo ... player.s
 .PHONY : help
 
 

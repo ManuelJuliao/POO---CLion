@@ -14,35 +14,36 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39bc65be-c48c-4086-95cc-64a2fcadb20d" name="Default Changelist" comment="Correcao n to numero">
+    <list default="true" id="39bc65be-c48c-4086-95cc-64a2fcadb20d" name="Default Changelist" comment="producao de ferro">
+      <change afterPath="$PROJECT_DIR$/Building.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Building.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Finance.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Finance.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Worker.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Worker.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/POO.dir/CXX.includecache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/POO.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/POO.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/POO.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/POO.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/POO.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/POO.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/POO.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/POO.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/POO.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/POO.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/POO.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/POO.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/POO.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/POO.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/POO.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/POO.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/POO.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/POO.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/POO.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/interface.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interface.h" beforeDir="false" afterPath="$PROJECT_DIR$/interface.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jogada.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/jogada.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jogada.h" beforeDir="false" afterPath="$PROJECT_DIR$/jogada.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/player.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player.h" beforeDir="false" afterPath="$PROJECT_DIR$/player.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ilha.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Ilha.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ilha.h" beforeDir="false" afterPath="$PROJECT_DIR$/Ilha.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Interface.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface.h" beforeDir="false" afterPath="$PROJECT_DIR$/Interface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jogada.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Jogada.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jogada.h" beforeDir="false" afterPath="$PROJECT_DIR$/Jogada.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +83,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Projects/polimorfismo" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -115,7 +116,11 @@
       <workItem from="1641319474935" duration="4991000" />
       <workItem from="1641471356889" duration="851000" />
       <workItem from="1641472226366" duration="5189000" />
-      <workItem from="1641571470744" duration="2000" />
+      <workItem from="1641571470744" duration="1237000" />
+      <workItem from="1641749054023" duration="37490000" />
+      <workItem from="1642034347486" duration="1000" />
+      <workItem from="1642078469836" duration="3736000" />
+      <workItem from="1642169568061" duration="3609000" />
     </task>
     <task id="LOCAL-00001" summary="Correcao n to numero">
       <created>1638895293374</created>
@@ -124,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638895293374</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="producao de ferro">
+      <created>1641571513360</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1641571513360</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +155,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Correcao n to numero" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correcao n to numero" />
+    <MESSAGE value="producao de ferro" />
+    <option name="LAST_COMMIT_MESSAGE" value="producao de ferro" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Jogada.cpp</url>
+          <line>422</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Jogada.cpp</url>
+          <line>234</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

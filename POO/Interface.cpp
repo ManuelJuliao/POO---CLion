@@ -6,39 +6,40 @@
 //
 
 
-#include "interface.h"
+#include "Interface.h"
 #include <vector>
 #include <stdlib.h>
 #include <string>
 #include <math.h>
-#include "jogada.h"
+#include "Worker.h"
+#include "Jogada.h"
 #include <iostream>
 #include <sstream>
-#include "player.h"
+#include "Player.h"
 
 using namespace std;
 
 
-interface::interface(){}
+Interface::Interface(){}
 
-interface::~interface(){}
+Interface::~Interface(){}
 
 
-void interface::init(){ //inicializa ilha [vetor] com o tamanho indicado pelo utilizador
+void Interface::init(){ //inicializa ilha [vetor] com o tamanho indicado pelo utilizador
     int i, tam;
     cout << "Introduza numero de linhas e colunas" << endl;
     cin >> controlo.nv >> controlo.nh;
     tam = controlo.nv * controlo.nh;
     //cout << controlo.nv << "..." << controlo.nh << endl;
     for (i = 0; i < tam; i++){
-        this->mapa.push_back (ilha());
+        this->mapa.push_back (Ilha());
     }
 }
-void interface::fill(){ //fill vetor com tipos de zona equilibrados
+void Interface::fill(){ //fill vetor com tipos de zona equilibrados
     int flag = 0;
     float thres = ceil((controlo.nh*controlo.nv)/6);
     string zona;
-    vector<ilha>::iterator ptr;
+    vector<Ilha>::iterator ptr;
     for (ptr = this->mapa.begin(); ptr < mapa.end(); ptr++) {
         while(flag == 0){
         int z = rand() % 6;
@@ -94,10 +95,10 @@ void interface::fill(){ //fill vetor com tipos de zona equilibrados
     
 }
 
-void interface::coor(){ // fill vetor com coordenadas (x,y)
+void Interface::coor(){ // fill vetor com coordenadas (x,y)
     int i=1;
     int j=1;
-    vector<ilha>::iterator ptr2;
+    vector<Ilha>::iterator ptr2;
     ptr2 = this->mapa.begin();
         for(i=1;i<=controlo.nv;i++){ //coor vertical , linha
             for(j=1;j<=controlo.nh;j++){ // coor vertical , coluna
@@ -115,10 +116,10 @@ void interface::coor(){ // fill vetor com coordenadas (x,y)
 }
 
 
-void interface::print(){  // imprime tabuleiro
+void Interface::print(){  // imprime tabuleiro
     int aux, cont=0;
     string straux;
-    vector<ilha>::iterator ptr3;
+    vector<Ilha>::iterator ptr3;
     ptr3 = this->mapa.begin();
     aux = 4*controlo.nh + 2 + (controlo.nh-1);
     
@@ -174,97 +175,122 @@ void interface::print(){  // imprime tabuleiro
     }
 }
 
-void interface::menu(){
+void Interface::menu(){
     string fullcomm; //input completo
     string comm; //ordem
     string p1, p2, p3; //parametros
     string dummy; //condicao de continuacao
     int jog; // switch
-    jogada jogada1;
-    player player1;
+    int flag = 0;
+    Jogada jogada1;
+    Player player1;
     cout << endl << "Menu inicial:" << endl;
     do{
-        day++;
-        if(day > 1){
-            dawn(&mapa, &player1); // amanhecer
-        }
-        cout << "Ordem: ";
-        cin.clear();
-        getline(cin >> ws, fullcomm);
-        istringstream iss(fullcomm);
-        iss >> comm >> p1 >> p2 >> p3;
-        //cin >> comm >> p1 >> p2 >> p3;
-        jog = jogada1.valida(comm);
-        switch (jog) {
-            case 1:
-                jogada1.joga1(comm, p1, p2, p3, &mapa);
+
+//        if(day > 1){
+//            dawn(&mapa, &player1); // amanhecer
+//        }
+        do{
+            comm.clear();
+            p1.clear();
+            p2.clear();
+            p3.clear();
+            cout << "Ordem: ";
+            cin.clear();
+            getline(cin >> ws, fullcomm);
+            istringstream iss(fullcomm);
+            iss >> comm >> p1 >> p2 >> p3;
+            //cin >> comm >> p1 >> p2 >> p3;
+            jog = jogada1.valida(comm);
+            if(jog == 0){
+                cout << "Comando incorreto" << endl;
+                continue;
+            }
+
+            switch (jog) {
+                case 1:
+                    flag=jogada1.joga1(comm, p1, p2, p3, &mapa, &buildings, &controlo, &player1);
+                    break;
+                case 2:
+                    jogada1.joga2(comm, p1, &mapa, &workers, day, &buildings, &controlo, &player1);
+                    break;
+                case 3:
+                    flag=jogada1.joga3(comm, p1, p2, &mapa, &buildings);
+                    break;
+                case 4:
+                    jogada1.joga4(comm, p1, p2, &mapa, &buildings);
+                    break;
+                case 5:
+                    jogada1.joga5(comm, p1, p2, p3, &mapa, &workers, &buildings);
+                    break;
+                case 6:
+                    jogada1.joga6(comm, p1, p2, &mapa);
+                    break;
+                case 7:
+                    flag= jogada1.joga7(comm, p1, &mapa, &workers, day, &buildings, &player1);
+                    break;
+                case 8:
+                    flag= jogada1.joga8(comm, p1, p2, &mapa, &controlo, &player1, &buildings);
+                    break;
+//                case 9:
+//                    jogada1.joga9(comm, &mapa);
+//                    break;
+                case 10:
+                    jogada1.joga10(comm, p1, &mapa);
+                    break;
+                case 11:
+                    jogada1.joga11(comm, p1, &mapa);
+                    break;
+                case 12:
+                    jogada1.joga12(comm, p1, &mapa);
+                    break;
+                case 13:
+                    jogada1.joga13(comm, p1, &mapa);
+                    break;
+                case 14:
+                    jogada1.joga14(comm, p1, &mapa);
+                    break;
+                case 15:
+                    jogada1.joga15(comm, p1, p2, p3, &mapa);
+                    break;
+                case 16:
+                    jogada1.joga16(comm, p1, &mapa);
+                    break;
+
+
+                default:
+                    break;
+            }
+            if(flag == 1){
+                continue;
+            }
+            //player1.calcprod(&mapa, &player1);
+            if(comm == "sair")
                 break;
-            case 2:
-                jogada1.joga2(comm, p1, &mapa);
-                break;
-            case 3:
-                jogada1.joga3(comm, p1, p2, &mapa);
-                break;
-            case 4:
-                jogada1.joga4(comm, p1, p2, &mapa);
-                break;
-            case 5:
-                jogada1.joga5(comm, p1, p2, p3, &mapa);
-                break;
-            case 6:
-                jogada1.joga6(comm, p1, p2, &mapa);
-                break;
-            case 7:
-                jogada1.joga7(comm, p1, &mapa);
-                break;
-            case 8:
-                jogada1.joga8(comm, p1, p2, &mapa);
-                break;
-            case 9:
-                jogada1.joga9(comm, &mapa);
-                break;
-            case 10:
-                jogada1.joga10(comm, p1, &mapa);
-                break;
-            case 11:
-                jogada1.joga11(comm, p1, &mapa);
-                break;
-            case 12:
-                jogada1.joga12(comm, p1, &mapa);
-                break;
-            case 13:
-                jogada1.joga13(comm, p1, &mapa);
-                break;
-            case 14:
-                jogada1.joga14(comm, p1, &mapa);
-                break;
-            case 15:
-                jogada1.joga15(comm, p1, p2, p3, &mapa);
-                break;
-            case 16:
-                jogada1.joga16(comm, p1, &mapa);
-                break;
-                
-                
-            default:
-                break;
-        }
-        //player1.calcprod(&mapa, &player1);
-        if(comm == "sair")
-            break;
+        }while(comm != "next");
+
         print();
+        night(&mapa, &player1, &workers,&buildings);
+        day++;
         cout << endl <<  "Continuar? [y/n]" << endl;
         cin >> dummy;
+        if(dummy == "n"){
+            break;
+        }
     }while (comm != "sair");
 
 }
 
-void interface::dawn(vector<ilha> *mapa, player *player1) {
-    player1->calcprod(mapa, player1);
+void Interface::night(vector<Ilha> *mapa, Player *player1, vector<Worker> *workers, vector<Building> *buildings) {
+    player1->calcprod(mapa, player1, buildings);
     player1->prod(player1);
     cout << endl << "Dia: " << day << endl << "Dinheiro: " <<player1->money << endl << "Ferro: " << player1->iron << endl << "Barras de aco: " << player1->steel << endl << "Carvao: " << player1->coal << endl << "Madeira: " << player1->wood << endl << "Vigas de madeira: " << player1->woodbeams << endl << "Eletricidade: " << player1->energy << endl;
     //amanhecer -> update recursos etc
 
+
 }
+
+
+
 
 

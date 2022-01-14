@@ -6,14 +6,14 @@
 //
 
 #include <iostream>
-#include "ilha.h"
-#include "interface.h"
-#include "player.h"
+#include "Ilha.h"
+#include "Interface.h"
+#include "Player.h"
 using namespace std;
 
 
 int main() {
-    interface anInterface;
+    Interface anInterface;
     //ilha newilha;
     //anInterface.print_ilha();
     anInterface.init();

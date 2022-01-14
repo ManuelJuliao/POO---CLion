@@ -6,9 +6,10 @@
 #define POO_PLAYER_H
 
 
-#include "ilha.h"
+#include "Ilha.h"
+#include "Building.h"
 
-class player {
+class Player {
 public :             // variaveis e devidas producoes por ronda
     int money;
     int iron;
@@ -23,11 +24,11 @@ public :             // variaveis e devidas producoes por ronda
     int energy;
     int energyprod;
 
-    static void calcprod(vector<ilha> *arr, player *player1);
-    static void prod(player *player1);
+    static void calcprod(vector<Ilha> *arr, Player *player1, vector<Building> *build);
+    static void prod(Player *player1);
 
-    player();
-    ~player();
+    Player();
+    ~Player();
 
 
 };

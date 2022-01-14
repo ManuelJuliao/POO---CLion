@@ -82,83 +82,131 @@ CMakeFiles/POO.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POO.dir/main.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\POO---CLion\POO\main.cpp -o CMakeFiles\POO.dir\main.cpp.s
 
-CMakeFiles/POO.dir/ilha.cpp.obj: CMakeFiles/POO.dir/flags.make
-CMakeFiles/POO.dir/ilha.cpp.obj: ../ilha.cpp
-CMakeFiles/POO.dir/ilha.cpp.obj: CMakeFiles/POO.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\POO---CLion\POO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/POO.dir/ilha.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/POO.dir/ilha.cpp.obj -MF CMakeFiles\POO.dir\ilha.cpp.obj.d -o CMakeFiles\POO.dir\ilha.cpp.obj -c C:\GitHub\POO---CLion\POO\ilha.cpp
+CMakeFiles/POO.dir/Ilha.cpp.obj: CMakeFiles/POO.dir/flags.make
+CMakeFiles/POO.dir/Ilha.cpp.obj: ../Ilha.cpp
+CMakeFiles/POO.dir/Ilha.cpp.obj: CMakeFiles/POO.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\POO---CLion\POO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/POO.dir/Ilha.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/POO.dir/Ilha.cpp.obj -MF CMakeFiles\POO.dir\Ilha.cpp.obj.d -o CMakeFiles\POO.dir\Ilha.cpp.obj -c C:\GitHub\POO---CLion\POO\Ilha.cpp
 
-CMakeFiles/POO.dir/ilha.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/POO.dir/ilha.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\POO---CLion\POO\ilha.cpp > CMakeFiles\POO.dir\ilha.cpp.i
+CMakeFiles/POO.dir/Ilha.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/POO.dir/Ilha.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\POO---CLion\POO\Ilha.cpp > CMakeFiles\POO.dir\Ilha.cpp.i
 
-CMakeFiles/POO.dir/ilha.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POO.dir/ilha.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\POO---CLion\POO\ilha.cpp -o CMakeFiles\POO.dir\ilha.cpp.s
+CMakeFiles/POO.dir/Ilha.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POO.dir/Ilha.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\POO---CLion\POO\Ilha.cpp -o CMakeFiles\POO.dir\Ilha.cpp.s
 
-CMakeFiles/POO.dir/interface.cpp.obj: CMakeFiles/POO.dir/flags.make
-CMakeFiles/POO.dir/interface.cpp.obj: ../interface.cpp
-CMakeFiles/POO.dir/interface.cpp.obj: CMakeFiles/POO.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\POO---CLion\POO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/POO.dir/interface.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/POO.dir/interface.cpp.obj -MF CMakeFiles\POO.dir\interface.cpp.obj.d -o CMakeFiles\POO.dir\interface.cpp.obj -c C:\GitHub\POO---CLion\POO\interface.cpp
+CMakeFiles/POO.dir/Interface.cpp.obj: CMakeFiles/POO.dir/flags.make
+CMakeFiles/POO.dir/Interface.cpp.obj: ../Interface.cpp
+CMakeFiles/POO.dir/Interface.cpp.obj: CMakeFiles/POO.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\POO---CLion\POO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/POO.dir/Interface.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/POO.dir/Interface.cpp.obj -MF CMakeFiles\POO.dir\Interface.cpp.obj.d -o CMakeFiles\POO.dir\Interface.cpp.obj -c C:\GitHub\POO---CLion\POO\Interface.cpp
 
-CMakeFiles/POO.dir/interface.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/POO.dir/interface.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\POO---CLion\POO\interface.cpp > CMakeFiles\POO.dir\interface.cpp.i
+CMakeFiles/POO.dir/Interface.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/POO.dir/Interface.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\POO---CLion\POO\Interface.cpp > CMakeFiles\POO.dir\Interface.cpp.i
 
-CMakeFiles/POO.dir/interface.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POO.dir/interface.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\POO---CLion\POO\interface.cpp -o CMakeFiles\POO.dir\interface.cpp.s
+CMakeFiles/POO.dir/Interface.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POO.dir/Interface.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\POO---CLion\POO\Interface.cpp -o CMakeFiles\POO.dir\Interface.cpp.s
 
-CMakeFiles/POO.dir/jogada.cpp.obj: CMakeFiles/POO.dir/flags.make
-CMakeFiles/POO.dir/jogada.cpp.obj: ../jogada.cpp
-CMakeFiles/POO.dir/jogada.cpp.obj: CMakeFiles/POO.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\POO---CLion\POO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/POO.dir/jogada.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/POO.dir/jogada.cpp.obj -MF CMakeFiles\POO.dir\jogada.cpp.obj.d -o CMakeFiles\POO.dir\jogada.cpp.obj -c C:\GitHub\POO---CLion\POO\jogada.cpp
+CMakeFiles/POO.dir/Jogada.cpp.obj: CMakeFiles/POO.dir/flags.make
+CMakeFiles/POO.dir/Jogada.cpp.obj: ../Jogada.cpp
+CMakeFiles/POO.dir/Jogada.cpp.obj: CMakeFiles/POO.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\POO---CLion\POO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/POO.dir/Jogada.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/POO.dir/Jogada.cpp.obj -MF CMakeFiles\POO.dir\Jogada.cpp.obj.d -o CMakeFiles\POO.dir\Jogada.cpp.obj -c C:\GitHub\POO---CLion\POO\Jogada.cpp
 
-CMakeFiles/POO.dir/jogada.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/POO.dir/jogada.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\POO---CLion\POO\jogada.cpp > CMakeFiles\POO.dir\jogada.cpp.i
+CMakeFiles/POO.dir/Jogada.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/POO.dir/Jogada.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\POO---CLion\POO\Jogada.cpp > CMakeFiles\POO.dir\Jogada.cpp.i
 
-CMakeFiles/POO.dir/jogada.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POO.dir/jogada.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\POO---CLion\POO\jogada.cpp -o CMakeFiles\POO.dir\jogada.cpp.s
+CMakeFiles/POO.dir/Jogada.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POO.dir/Jogada.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\POO---CLion\POO\Jogada.cpp -o CMakeFiles\POO.dir\Jogada.cpp.s
 
-CMakeFiles/POO.dir/player.cpp.obj: CMakeFiles/POO.dir/flags.make
-CMakeFiles/POO.dir/player.cpp.obj: ../player.cpp
-CMakeFiles/POO.dir/player.cpp.obj: CMakeFiles/POO.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\POO---CLion\POO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/POO.dir/player.cpp.obj"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/POO.dir/player.cpp.obj -MF CMakeFiles\POO.dir\player.cpp.obj.d -o CMakeFiles\POO.dir\player.cpp.obj -c C:\GitHub\POO---CLion\POO\player.cpp
+CMakeFiles/POO.dir/Player.cpp.obj: CMakeFiles/POO.dir/flags.make
+CMakeFiles/POO.dir/Player.cpp.obj: ../Player.cpp
+CMakeFiles/POO.dir/Player.cpp.obj: CMakeFiles/POO.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\POO---CLion\POO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/POO.dir/Player.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/POO.dir/Player.cpp.obj -MF CMakeFiles\POO.dir\Player.cpp.obj.d -o CMakeFiles\POO.dir\Player.cpp.obj -c C:\GitHub\POO---CLion\POO\Player.cpp
 
-CMakeFiles/POO.dir/player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/POO.dir/player.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\POO---CLion\POO\player.cpp > CMakeFiles\POO.dir\player.cpp.i
+CMakeFiles/POO.dir/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/POO.dir/Player.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\POO---CLion\POO\Player.cpp > CMakeFiles\POO.dir\Player.cpp.i
 
-CMakeFiles/POO.dir/player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POO.dir/player.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\POO---CLion\POO\player.cpp -o CMakeFiles\POO.dir\player.cpp.s
+CMakeFiles/POO.dir/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POO.dir/Player.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\POO---CLion\POO\Player.cpp -o CMakeFiles\POO.dir\Player.cpp.s
+
+CMakeFiles/POO.dir/Worker.cpp.obj: CMakeFiles/POO.dir/flags.make
+CMakeFiles/POO.dir/Worker.cpp.obj: ../Worker.cpp
+CMakeFiles/POO.dir/Worker.cpp.obj: CMakeFiles/POO.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\POO---CLion\POO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/POO.dir/Worker.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/POO.dir/Worker.cpp.obj -MF CMakeFiles\POO.dir\Worker.cpp.obj.d -o CMakeFiles\POO.dir\Worker.cpp.obj -c C:\GitHub\POO---CLion\POO\Worker.cpp
+
+CMakeFiles/POO.dir/Worker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/POO.dir/Worker.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\POO---CLion\POO\Worker.cpp > CMakeFiles\POO.dir\Worker.cpp.i
+
+CMakeFiles/POO.dir/Worker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POO.dir/Worker.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\POO---CLion\POO\Worker.cpp -o CMakeFiles\POO.dir\Worker.cpp.s
+
+CMakeFiles/POO.dir/Building.cpp.obj: CMakeFiles/POO.dir/flags.make
+CMakeFiles/POO.dir/Building.cpp.obj: ../Building.cpp
+CMakeFiles/POO.dir/Building.cpp.obj: CMakeFiles/POO.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\POO---CLion\POO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/POO.dir/Building.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/POO.dir/Building.cpp.obj -MF CMakeFiles\POO.dir\Building.cpp.obj.d -o CMakeFiles\POO.dir\Building.cpp.obj -c C:\GitHub\POO---CLion\POO\Building.cpp
+
+CMakeFiles/POO.dir/Building.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/POO.dir/Building.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\POO---CLion\POO\Building.cpp > CMakeFiles\POO.dir\Building.cpp.i
+
+CMakeFiles/POO.dir/Building.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POO.dir/Building.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\POO---CLion\POO\Building.cpp -o CMakeFiles\POO.dir\Building.cpp.s
+
+CMakeFiles/POO.dir/Finance.cpp.obj: CMakeFiles/POO.dir/flags.make
+CMakeFiles/POO.dir/Finance.cpp.obj: ../Finance.cpp
+CMakeFiles/POO.dir/Finance.cpp.obj: CMakeFiles/POO.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\GitHub\POO---CLion\POO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/POO.dir/Finance.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/POO.dir/Finance.cpp.obj -MF CMakeFiles\POO.dir\Finance.cpp.obj.d -o CMakeFiles\POO.dir\Finance.cpp.obj -c C:\GitHub\POO---CLion\POO\Finance.cpp
+
+CMakeFiles/POO.dir/Finance.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/POO.dir/Finance.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\GitHub\POO---CLion\POO\Finance.cpp > CMakeFiles\POO.dir\Finance.cpp.i
+
+CMakeFiles/POO.dir/Finance.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/POO.dir/Finance.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\GitHub\POO---CLion\POO\Finance.cpp -o CMakeFiles\POO.dir\Finance.cpp.s
 
 # Object files for target POO
 POO_OBJECTS = \
 "CMakeFiles/POO.dir/main.cpp.obj" \
-"CMakeFiles/POO.dir/ilha.cpp.obj" \
-"CMakeFiles/POO.dir/interface.cpp.obj" \
-"CMakeFiles/POO.dir/jogada.cpp.obj" \
-"CMakeFiles/POO.dir/player.cpp.obj"
+"CMakeFiles/POO.dir/Ilha.cpp.obj" \
+"CMakeFiles/POO.dir/Interface.cpp.obj" \
+"CMakeFiles/POO.dir/Jogada.cpp.obj" \
+"CMakeFiles/POO.dir/Player.cpp.obj" \
+"CMakeFiles/POO.dir/Worker.cpp.obj" \
+"CMakeFiles/POO.dir/Building.cpp.obj" \
+"CMakeFiles/POO.dir/Finance.cpp.obj"
 
 # External object files for target POO
 POO_EXTERNAL_OBJECTS =
 
 POO.exe: CMakeFiles/POO.dir/main.cpp.obj
-POO.exe: CMakeFiles/POO.dir/ilha.cpp.obj
-POO.exe: CMakeFiles/POO.dir/interface.cpp.obj
-POO.exe: CMakeFiles/POO.dir/jogada.cpp.obj
-POO.exe: CMakeFiles/POO.dir/player.cpp.obj
+POO.exe: CMakeFiles/POO.dir/Ilha.cpp.obj
+POO.exe: CMakeFiles/POO.dir/Interface.cpp.obj
+POO.exe: CMakeFiles/POO.dir/Jogada.cpp.obj
+POO.exe: CMakeFiles/POO.dir/Player.cpp.obj
+POO.exe: CMakeFiles/POO.dir/Worker.cpp.obj
+POO.exe: CMakeFiles/POO.dir/Building.cpp.obj
+POO.exe: CMakeFiles/POO.dir/Finance.cpp.obj
 POO.exe: CMakeFiles/POO.dir/build.make
 POO.exe: CMakeFiles/POO.dir/linklibs.rsp
 POO.exe: CMakeFiles/POO.dir/objects1.rsp
 POO.exe: CMakeFiles/POO.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\GitHub\POO---CLion\POO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable POO.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\GitHub\POO---CLion\POO\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable POO.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\POO.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

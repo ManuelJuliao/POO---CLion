@@ -8,11 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/GitHub/POO---CLion/POO/ilha.cpp" "CMakeFiles/POO.dir/ilha.cpp.obj" "gcc" "CMakeFiles/POO.dir/ilha.cpp.obj.d"
-  "C:/GitHub/POO---CLion/POO/interface.cpp" "CMakeFiles/POO.dir/interface.cpp.obj" "gcc" "CMakeFiles/POO.dir/interface.cpp.obj.d"
-  "C:/GitHub/POO---CLion/POO/jogada.cpp" "CMakeFiles/POO.dir/jogada.cpp.obj" "gcc" "CMakeFiles/POO.dir/jogada.cpp.obj.d"
+  "C:/GitHub/POO---CLion/POO/Finance.cpp" "CMakeFiles/POO.dir/Finance.cpp.obj" "gcc" "CMakeFiles/POO.dir/Finance.cpp.obj.d"
+  "C:/GitHub/POO---CLion/POO/Building.cpp" "CMakeFiles/POO.dir/building.cpp.obj" "gcc" "CMakeFiles/POO.dir/building.cpp.obj.d"
+  "C:/GitHub/POO---CLion/POO/Ilha.cpp" "CMakeFiles/POO.dir/ilha.cpp.obj" "gcc" "CMakeFiles/POO.dir/ilha.cpp.obj.d"
+  "C:/GitHub/POO---CLion/POO/Interface.cpp" "CMakeFiles/POO.dir/interface.cpp.obj" "gcc" "CMakeFiles/POO.dir/interface.cpp.obj.d"
+  "C:/GitHub/POO---CLion/POO/Jogada.cpp" "CMakeFiles/POO.dir/jogada.cpp.obj" "gcc" "CMakeFiles/POO.dir/jogada.cpp.obj.d"
   "C:/GitHub/POO---CLion/POO/main.cpp" "CMakeFiles/POO.dir/main.cpp.obj" "gcc" "CMakeFiles/POO.dir/main.cpp.obj.d"
-  "C:/GitHub/POO---CLion/POO/player.cpp" "CMakeFiles/POO.dir/player.cpp.obj" "gcc" "CMakeFiles/POO.dir/player.cpp.obj.d"
+  "C:/GitHub/POO---CLion/POO/Player.cpp" "CMakeFiles/POO.dir/player.cpp.obj" "gcc" "CMakeFiles/POO.dir/player.cpp.obj.d"
+  "C:/GitHub/POO---CLion/POO/Worker.cpp" "CMakeFiles/POO.dir/worker.cpp.obj" "gcc" "CMakeFiles/POO.dir/worker.cpp.obj.d"
   )
 
 # Targets to which this target links.

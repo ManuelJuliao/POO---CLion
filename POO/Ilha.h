@@ -19,15 +19,15 @@ using namespace std;
 
 
 
-class ilha {
+class Ilha {
 public:
     int x,y;
     string zona;
     string edif;
     char trab[50]; //string trabalhadores
     int num_trab;
-    ilha ();
-    ~ilha();
+    Ilha ();
+    ~Ilha();
     
 };
 

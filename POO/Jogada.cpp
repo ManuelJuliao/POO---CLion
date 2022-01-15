@@ -6,7 +6,7 @@
 //
 #include <string>
 #include "Jogada.h"
-#include <stdio.h>
+#include <cstdio>
 #include "Ilha.h"
 #include "Interface.h"
 #include "Building.h"
@@ -32,6 +32,7 @@ Jogada::~Jogada(){
 
 int Jogada::joga1(string comm, string p1, string p2, string p3, vector<Ilha> *arr, vector<Building> *build, struct controlo *controlo, Player *player1){
     string play;
+    int cost;
     int flag=0, aux;
     int x = stoi(p2);
     int y = stoi(p3);
@@ -40,9 +41,16 @@ int Jogada::joga1(string comm, string p1, string p2, string p3, vector<Ilha> *ar
     vector<Ilha>::iterator ptr;
     for (ptr = arr->begin(); ptr < arr->end(); ptr++){
         if(ptr->x == x && ptr->y == y) {
-            break;
+            if (ptr->edif != "    ") {
+                flag=1;
+                cout << "Nao e possivel construir nesta zona" << endl;
+            }
+            else{
+                break;
+            }
         }
     }
+
 
     if(p1 == "minaf"){
         if(player1->woodbeams < 10 && player1->money < 100){
@@ -54,6 +62,7 @@ int Jogada::joga1(string comm, string p1, string p2, string p3, vector<Ilha> *ar
             cout << "Sem vigas suficientes, gastar " << aux << "$? (y/n)" << endl;
             cin >> dummy;
             if(dummy == "y"){
+                cost = aux;
                 player1->money -= aux;
             }else{
                 flag=1;
@@ -61,14 +70,14 @@ int Jogada::joga1(string comm, string p1, string p2, string p3, vector<Ilha> *ar
         }
         if(flag == 0){
             play = "MnF ";
-            build->push_back(minaf(x,y, ptr->trab)); // add edif to array
+            build->push_back(minaf(x,y, ptr->trab, cost)); // add edif to array
             controlo->minaf++;
         }
 
     }
     else if(p1 == "minc"){
         if(player1->woodbeams < 10 && player1->money < 100){
-            cout << "Nao tem recurso suficientes (faltam " << 10-player1->woodbeams << " vigas de madeira)" << endl;
+            cout << "Recursos insuficientes (faltam " << 10-player1->woodbeams << " vigas de madeira)" << endl;
             flag=1;
         }
         else if(player1->woodbeams < 10){
@@ -76,6 +85,7 @@ int Jogada::joga1(string comm, string p1, string p2, string p3, vector<Ilha> *ar
             cout << "Sem vigas suficientes, gastar " << aux << "$? (y/n)" << endl;
             cin >> dummy;
             if(dummy == "y"){
+                cost = aux;
                 player1->money -= aux;
             }else{
                 flag=1;
@@ -83,48 +93,93 @@ int Jogada::joga1(string comm, string p1, string p2, string p3, vector<Ilha> *ar
         }
         if(flag == 0){
             play = "MnC ";
-            build->push_back(minc(x,y, ptr->trab)); // add edif to array
+            build->push_back(minc(x,y, ptr->trab,cost)); // add edif to array
             controlo->minc++;
         }
 
     }
     else if(p1 == "central"){
-        play = "elec";
-        build->push_back(central(x,y, ptr->trab)); // add edif to array
-        controlo->central++;
+        aux = 15-player1->money;
+        if(player1->money < 15){
+            cout << "Recursos insuficientes (faltam " << aux << "$)" << endl;
+            flag = 1;
+        }
+        if(flag == 0){
+            cost = 15;
+            play = "elec";
+            build->push_back(central(x,y, ptr->trab,cost)); // add edif to array
+            controlo->central++;
+        }
+
     }
     else if(p1 == "bat"){
-        play = "bat ";
-        build->push_back(bat(x,y, ptr->trab)); // add edif to array
-        controlo->bat++;
+        aux = 10-player1->money;
+        int aux2 = 10-player1->woodbeams;
+        if(player1->money < 10 && player1->woodbeams < 10){
+            cout << "Recursos insuficientes (faltam " << aux << "$ e " << aux2 << " vigas)" << endl;
+            flag = 1;
+        }else if(player1->money < 10 && player1->woodbeams > 10){
+            cout << "Recursos insuficientes (faltam " << aux << "$)" << endl;
+            flag = 1;
+        }else if(player1->money > 10 && player1->woodbeams < 10){
+            cout << "Recursos insuficientes (faltam " << aux2 << " vigas)" << endl;
+            flag = 1;
+        }
+        if(flag == 0){
+            cost = 10;
+            play = "bat ";
+            build->push_back(bat(x,y, ptr->trab,cost)); // add edif to array
+            controlo->bat++;
+        }
     }
+
     else if(p1 == "fund"){
-        play = "fund";
-        build->push_back(fund(x,y, ptr->trab)); // add edif to array
-        controlo->fund++;
+        aux = 10-player1->money;
+        if(player1->money < 10){
+            cout << "Recursos insuficientes (faltam " << aux << " $)" << endl;
+            flag=1;
+        }
+        if(flag == 0){
+            cost = 10;
+            play = "fund";
+            build->push_back(fund(x,y, ptr->trab,cost)); // add edif to array
+            controlo->fund++;
+        }
+
     }
     else if(p1 == "edx"){
-        play = "ext ";
-        build->push_back(edx(x,y, ptr->trab)); // add edif to array
-        controlo->edx++;
+        if(player1->wood < 20 && player1->money < 100){
+            cout << "Nao tem recurso suficientes (faltam " << 10-player1->wood << " unidades de madeira)" << endl;
+            flag=1;
+        }
+        else if(player1->wood < 10){
+            aux = (20-player1->wood)*5;
+            cout << "Sem vigas suficientes, gastar " << aux << "$? (y/n)" << endl;
+            cin >> dummy;
+            if(dummy == "y"){
+                cost = aux;
+                player1->money -= aux;
+            }else{
+                flag=1;
+            }
+        }
+        if(flag == 0){
+            play = "ext ";
+            build->push_back(edx(x,y, ptr->trab,cost)); // add edif to array
+            controlo->edx++;
+        }
+
     }
     else{
         flag=1;
         cout << "Comando incorreto" << endl;
     }
 
-
-    //vector<ilha>::iterator ptr2;
-    for (ptr = arr->begin(); ptr < arr->end(); ptr++){
-        if(ptr->x == x && ptr->y == y){
-            if (ptr->edif != "    ") {
-                flag=1;
-                cout << "Nao e possivel construir nesta zona" << endl;
-            }
-            else
-            ptr->edif = play;
-        }
+    if(flag == 0){
+        ptr->edif = play;
     }
+    //vector<ilha>::iterator ptr2;
+
 
 
 
@@ -169,7 +224,7 @@ void Jogada::joga2(string comm, string p1, vector<Ilha> *arr, vector<Worker> *wo
             joga5(comm, p1, p2, p3, arr, work, build);
             break;
         case 6:
-            joga6(comm, p1, p2, arr);
+            joga6(comm, p1, p2, arr,controlo, player1,build);
             break;
         case 7:
             joga7(comm, p1, arr, work,dia, build, player1);
@@ -193,13 +248,13 @@ void Jogada::joga2(string comm, string p1, vector<Ilha> *arr, vector<Worker> *wo
             joga13(comm, p1, arr);
             break;
         case 14:
-            joga14(comm, p1, arr);
+            joga14(comm, p1, player1);
             break;
         case 15:
-            joga15(comm, p1, p2, p3, arr);
+            joga15(comm, p1, p2, p3, arr, build, controlo);
             break;
         case 16:
-            joga16(comm, p1, arr);
+            joga16(comm, p1, arr, work, build);
             break;
             
             
@@ -278,9 +333,10 @@ int Jogada::joga4(string comm, string p1, string p2, vector<Ilha> *arr,  vector<
     //cout << "Jogada 4" << endl;
 
 }
-void Jogada::joga5(string comm, string p1, string p2, string p3, vector<Ilha> *arr, vector<Worker> *work, vector<Building> *build){
+int Jogada::joga5(string comm, string p1, string p2, string p3, vector<Ilha> *arr, vector<Worker> *work, vector<Building> *build){
     //move -> id
-    int i;
+    int i,aux;
+    int flag=0;
     string id = p1;
     int x = stoi(p2);
     int y = stoi(p3);
@@ -291,52 +347,145 @@ void Jogada::joga5(string comm, string p1, string p2, string p3, vector<Ilha> *a
             for(ptr2 = arr->begin(); ptr2 < arr->end(); ptr2++){
                 if(ptr2->x == ptr->x && ptr2->y == ptr->y){
                     for(i=0; i<sizeof(ptr2->trab);i++){ // apagar do array de trabalhadores da celula
-                        if(ptr2->trab[i] = ptr->c){
+                        if(ptr2->trab[i] == ptr->c){
                             ptr2->trab[i]=' ';
+                            aux = i;
                             break;
                         }
                     }
-                    for(i;i<sizeof(ptr2->trab);i++){    // ajustar valores imprimidos
-                        ptr2->trab[i] = ptr2->trab[i+1];
+                    for(int j=aux;j<sizeof(ptr2->trab);j++){    // ajustar valores imprimidos
+                        ptr2->trab[j] = ptr2->trab[j+1];
                     }
                     ptr2->num_trab--;
                 }
             }
             ptr->x = x;
             ptr->y = y;
-
+            flag=0;
             break;
         }
+        else{
+            flag=1;
+        }
+
+
     }
-    for(ptr2 = arr->begin(); ptr2 < arr->end(); ptr2++){ // reescrever nas novas coordenadas
-        if(ptr2->x == x && ptr2->y == y){
-            for (int i=0; i<=sizeof(ptr2->trab); i++) {
-                if (ptr2->trab[i] == ' ') {
-                    ptr2->trab[i] = ptr->c;
-                    ptr2->num_trab++;
-                    break;
+    if(flag==0){
+        for(ptr2 = arr->begin(); ptr2 < arr->end(); ptr2++){ // reescrever nas novas coordenadas
+            if(ptr2->x == x && ptr2->y == y){
+                for (int i=0; i<=sizeof(ptr2->trab); i++) {
+                    if (ptr2->trab[i] == ' ') {
+                        ptr2->trab[i] = ptr->c;
+                        ptr2->num_trab++;
+                        break;
+                    }
                 }
             }
         }
-    }
 
-    vector<Building>::iterator ptr3;
+        vector<Building>::iterator ptr3;
 
-    for (ptr3 = build->begin(); ptr3 < build->end(); ptr3++){ // preenche no edificio caso exista
-        if(ptr3->x == x && ptr3->y == y){
-            for(int i=0; i<50; i++){
-                ptr3->trab[i] = ptr2->trab[i];
+        for (ptr3 = build->begin(); ptr3 < build->end(); ptr3++){ // preenche no edificio caso exista
+            if(ptr3->x == x && ptr3->y == y){
+                for(int i=0; i<50; i++){
+                    ptr3->trab[i] = ptr2->trab[i];
+                }
+                break;
             }
-            break;
-        }
 
+        }
     }
-    cout << ptr->c << endl;
+    else{
+        cout << "Trabalhador nao existe" << endl;
+    }
+
+    return flag;
+
+    //cout << ptr->c << endl;
     //cout << "Jogada 5" << endl;
     
 }
-void Jogada::joga6(string comm, string p1, string p2, vector<Ilha> *arr){
-    cout << "Jogada 6" << endl;
+int Jogada::joga6(string comm, string p1, string p2, vector<Ilha> *arr, struct controlo *controlo, Player *player1,vector<Building> *build){
+    int flag=0;
+    vector<Ilha>::iterator ptr;
+    vector<Building>::iterator ptr2;
+    //se p1 for numero, vende edificio
+    if (isNumber(p1)){
+        int x = stoi(p1);
+        int y = stoi(p2);
+        for (ptr = arr->begin(); ptr < arr->end(); ptr++){
+            if (ptr->x == x && ptr->y == y){
+                ptr->edif = '    ';
+            }
+        }
+        for (ptr2 = build->begin(); ptr2 < build->end(); ptr2++){
+            if (ptr2->x == x && ptr2->y == y){
+                // add resource to player
+                build->erase(ptr2);
+            }
+        }
+    }
+    //se p1 for palavra, vende recurso
+    else{
+        int qt = stoi(p2);
+        if(p1 == "ferro"){
+            if(player1->iron < qt){
+                cout << "Não tem ferro suficiente" << endl;
+                flag =1;
+            }else{
+                player1->iron -= qt;
+                player1->money += qt;
+            }
+        }
+        else if(p1 == "aco"){
+            if(player1->steel < qt){
+                cout << "Não tem aço suficiente" << endl;
+                flag =1;
+            }else{
+                player1->steel -= qt;
+                player1->money += qt*2;
+            }
+        }
+        else if(p1 == "carvao"){
+            if(player1->coal < qt){
+                cout << "Não tem carvao suficiente" << endl;
+                flag =1;
+            }else{
+                player1->coal -= qt;
+                player1->money += qt;
+            }
+        }
+        else if(p1 == "mad"){
+            if(player1->wood < qt){
+                cout << "Não tem madeira suficiente" << endl;
+                flag =1;
+            }else{
+                player1->wood -= qt;
+                player1->money += qt;
+            }
+        }
+        else if(p1 == "viga"){
+            if(player1->woodbeams == 0){
+                cout << "Não tem vigas suficiente" << endl;
+                flag =1;
+            }else{
+                player1->woodbeams -= qt;
+                player1->money += qt*2;
+            }
+        }
+        else if(p1 == "eletr"){
+            if(player1->energy < qt){
+                cout << "Não tem energia suficiente" << endl;
+                flag =1;
+            }else{
+                player1->energy -= qt;
+                player1->money += qt*(1.5);
+            }
+        }
+
+    }
+
+    //cout << "Jogada 6" << endl;
 
 }
 int Jogada::joga7(string comm, string p1, vector<Ilha> *arr, vector<Worker> *work, int dia, vector<Building> *build, Player *player1){
@@ -492,16 +641,124 @@ void Jogada::joga13(string comm, string p1, vector<Ilha> *arr){
     cout << "Jogada 13" << endl;
 
 }
-void Jogada::joga14(string comm, string p1, vector<Ilha> *arr){
-    cout << "Jogada 14" << endl;
+void Jogada::joga14(string comm, string p1, Player *player1){
+    int value = stoi(p1);
+    player1->money += value;
+    cout << player1->money << endl;
+
+    //cout << "Jogada 14" << endl;
 
 }
-void Jogada::joga15(string comm, string p1, string p2, string p3, vector<Ilha> *arr){
-    cout << "Jogada 15" << endl;
+void Jogada::joga15(string comm, string p1, string p2, string p3, vector<Ilha> *arr, vector<Building> *build,struct controlo *controlo ){
+    string play;
+    int cost=0;
+    int flag=0, aux;
+    int x = stoi(p2);
+    int y = stoi(p3);
+    string dummy;
+
+    vector<Ilha>::iterator ptr;
+    for (ptr = arr->begin(); ptr < arr->end(); ptr++){
+        if(ptr->x == x && ptr->y == y) {
+            break;
+        }
+    }
+
+    if(p1 == "minaf"){
+        play = "MnF ";
+        build->push_back(minaf(x,y, ptr->trab, cost)); // add edif to array
+        controlo->minaf++;
+
+    }
+    else if(p1 == "minc"){
+        play = "MnC ";
+        build->push_back(minc(x,y, ptr->trab, cost)); // add edif to array
+        controlo->minc++;
+    }
+    else if(p1 == "central"){
+        play = "elec";
+        build->push_back(central(x,y, ptr->trab, cost)); // add edif to array
+        controlo->central++;
+    }
+    else if(p1 == "bat"){
+        play = "bat ";
+        build->push_back(bat(x,y, ptr->trab, cost)); // add edif to array
+        controlo->bat++;
+    }
+    else if(p1 == "fund"){
+        play = "fund";
+        build->push_back(fund(x,y, ptr->trab, cost)); // add edif to array
+        controlo->fund++;
+    }
+    else if(p1 == "edx"){
+        play = "ext ";
+        build->push_back(edx(x,y, ptr->trab, cost)); // add edif to array
+        controlo->edx++;
+    }
+    else{
+        flag=1;
+        cout << "Edificio nao existe" << endl;
+    }
+
+
+    //vector<ilha>::iterator ptr2;
+    for (ptr = arr->begin(); ptr < arr->end(); ptr++){
+        if(ptr->x == x && ptr->y == y){
+            if (ptr->edif != "    ") {
+                flag=1;
+                cout << "Nao e possivel construir nesta zona" << endl;
+            }
+            else
+                ptr->edif = play;
+        }
+    }
+
+
+
+
+    //cout << "Jogada 15" << endl;
 
 }
-void Jogada::joga16(string comm, string p1, vector<Ilha> *arr){
-    cout << "Jogada 16" << endl;
+void Jogada::joga16(string comm, string p1, vector<Ilha> *arr, vector<Worker> *work, vector<Building> *build){
+    int i, x,y;
+    string id = p1;
+    vector<Worker>::iterator ptr;
+    vector<Ilha>::iterator ptr2;
+    for(ptr = work->begin(); ptr < work->end(); ptr++){
+        if(ptr->id == id){
+            x= ptr->x; y= ptr->y;
+            work->erase(ptr);
+            for(ptr2 = arr->begin(); ptr2 < arr->end(); ptr2++){
+                if(ptr2->x == ptr->x && ptr2->y == ptr->y){
+                    for(i=0; i<sizeof(ptr2->trab);i++){ // apagar do array de trabalhadores da celula
+                        if(ptr2->trab[i] = ptr->c){
+                            ptr2->trab[i]=' ';
+                            break;
+                        }
+                    }
+                    for(i;i<sizeof(ptr2->trab);i++){    // ajustar valores imprimidos
+                        ptr2->trab[i] = ptr2->trab[i+1];
+                    }
+                    ptr2->num_trab--;
+                }
+            }
+
+            break;
+        }
+    }
+
+    vector<Building>::iterator ptr3;
+
+    for (ptr3 = build->begin(); ptr3 < build->end(); ptr3++){
+        if(ptr3->x == x && ptr3->y == y){
+            for(int i=0; i<50; i++){
+                ptr3->trab[i] = ptr2->trab[i];
+            }
+            break;
+        }
+
+    }
+    //cout << "Jogada 16" << endl;
 
 }
 
@@ -578,4 +835,13 @@ int Jogada::valida(string comm){
     }
     else
         return jog;
+}
+
+
+bool isNumber(string str)
+{
+    for (char c : str) {
+        if (std::isdigit(c) == 0) return false;
+    }
+    return true;
 }

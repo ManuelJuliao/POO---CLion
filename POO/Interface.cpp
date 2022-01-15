@@ -8,7 +8,7 @@
 
 #include "Interface.h"
 #include <vector>
-#include <stdlib.h>
+#include <cstdlib>
 #include <string>
 #include <math.h>
 #include "Worker.h"
@@ -37,55 +37,89 @@ void Interface::init(){ //inicializa ilha [vetor] com o tamanho indicado pelo ut
 }
 void Interface::fill(){ //fill vetor com tipos de zona equilibrados
     int flag = 0;
+    int i, tam;
+    cout << "Introduza numero de linhas e colunas" << endl;
+    cin >> controlo.nv >> controlo.nh;
+    tam = controlo.nv * controlo.nh;
     float thres = ceil((controlo.nh*controlo.nv)/6);
     string zona;
     vector<Ilha>::iterator ptr;
-    for (ptr = this->mapa.begin(); ptr < mapa.end(); ptr++) {
+    //for (ptr = this->mapa.begin(); ptr < mapa.end(); ptr++) {
+    for (i = 0; i < tam; i++){
         while(flag == 0){
-        int z = rand() % 6;
-        switch (z) {
-            case 0:
-                zona = "mnt ";
-                controlo.mont++;
-                if(controlo.mont <= thres)
-                    flag = 1;
-                break;
-            case 1:
-                zona = "dsr ";
-                controlo.des++;
-                if(controlo.des <= thres)
-                    flag = 1;
-                break;
-            case 2:
-                zona = "pas ";
-                controlo.pas++;
-                if(controlo.pas <= thres)
-                    flag = 1;
-                break;
-            case 3:
-                zona = "flr ";
-                controlo.flor++;
-                if(controlo.flor <= thres)
-                    flag = 1;
-                break;
-            case 4:
-                zona = "pnt ";
-                controlo.pant++;
-                if(controlo.pant <= thres)
-                    flag = 1;
-                break;
-            case 5:
-                zona = "znX ";
-                controlo.zonX++;
-                if(controlo.zonX <= thres)
-                    flag = 1;
-                break;
-            default:
-                break;
-            }//switch
+            int z = rand() % 6;
+            switch (z) {
+                case 0:
+                    if(controlo.mont > thres){
+                        flag = 1;
+                        break;
+                    }
+                    else{
+                        mapa.push_back (montanha());
+                        zona = "mnt ";
+                        controlo.mont++;
+                    }
+
+                case 1:
+                    if(controlo.des > thres){
+                        flag = 1;
+                        break;
+                    }
+                    else{
+                        mapa.push_back (deserto());
+                        zona = "dsr ";
+                        controlo.des++;
+                    }
+                case 2:
+                    if(controlo.pas > thres){
+                        flag = 1;
+                        break;
+                    }
+                    else{
+                        mapa.push_back (pastagem());
+                        zona = "pas ";
+                        controlo.pas++;
+                    }
+
+                case 3:
+                    if(controlo.flor > thres){
+                        flag = 1;
+                        break;
+                    }
+                    else{
+                        mapa.push_back (floresta());
+                        zona = "flr ";
+                        controlo.flor++;
+                    }
+
+                case 4:
+                    if(controlo.pant > thres){
+                        flag = 1;
+                        break;
+                    }
+                    else{
+                        mapa.push_back (pantano());
+                        zona = "pnt ";
+                        controlo.pant++;
+                    }
+
+                case 5:
+                    if(controlo.zonX > thres){
+                        flag = 1;
+                        break;
+                    }
+                    else{
+                        mapa.push_back (zonax());
+                        zona = "znX ";
+                        controlo.zonX++;
+                    }
+
+                default:
+                    break;
+                }//switch
         }//while
         
-        ptr->zona = zona;
+
         flag=0;
     }
 //    for (ptr = this->mapa.begin(); ptr < mapa.end(); ptr++){
@@ -221,10 +255,10 @@ void Interface::menu(){
                     jogada1.joga4(comm, p1, p2, &mapa, &buildings);
                     break;
                 case 5:
-                    jogada1.joga5(comm, p1, p2, p3, &mapa, &workers, &buildings);
+                    flag=jogada1.joga5(comm, p1, p2, p3, &mapa, &workers, &buildings);
                     break;
                 case 6:
-                    jogada1.joga6(comm, p1, p2, &mapa);
+                    jogada1.joga6(comm, p1, p2, &mapa, &controlo, &player1, &buildings);
                     break;
                 case 7:
                     flag= jogada1.joga7(comm, p1, &mapa, &workers, day, &buildings, &player1);
@@ -248,13 +282,13 @@ void Interface::menu(){
                     jogada1.joga13(comm, p1, &mapa);
                     break;
                 case 14:
-                    jogada1.joga14(comm, p1, &mapa);
+                    jogada1.joga14(comm, p1, &player1);
                     break;
                 case 15:
-                    jogada1.joga15(comm, p1, p2, p3, &mapa);
+                    jogada1.joga15(comm, p1, p2, p3, &mapa, &buildings, &controlo);
                     break;
                 case 16:
-                    jogada1.joga16(comm, p1, &mapa);
+                    jogada1.joga16(comm, p1, &mapa, &workers, &buildings);
                     break;
 
 
@@ -266,7 +300,7 @@ void Interface::menu(){
             }
             //player1.calcprod(&mapa, &player1);
             if(comm == "sair")
-                break;
+                exit(0);
         }while(comm != "next");
 
         print();
@@ -286,6 +320,11 @@ void Interface::night(vector<Ilha> *mapa, Player *player1, vector<Worker> *worke
     player1->prod(player1);
     cout << endl << "Dia: " << day << endl << "Dinheiro: " <<player1->money << endl << "Ferro: " << player1->iron << endl << "Barras de aco: " << player1->steel << endl << "Carvao: " << player1->coal << endl << "Madeira: " << player1->wood << endl << "Vigas de madeira: " << player1->woodbeams << endl << "Eletricidade: " << player1->energy << endl;
     //amanhecer -> update recursos etc
+
+
+}
+
+void Interface::dawn(vector<Ilha> *mapa, Player *player1, vector<Worker> *workers, vector<Building> *buildings){
 
 
 }

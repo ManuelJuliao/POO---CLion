@@ -16,7 +16,7 @@ int main() {
     Interface anInterface;
     //ilha newilha;
     //anInterface.print_ilha();
-    anInterface.init();
+    //anInterface.init();
     anInterface.fill();
     anInterface.coor();
     anInterface.print();

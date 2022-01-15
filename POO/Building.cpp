@@ -11,8 +11,10 @@ Building::Building(){
 Building::~Building() {
 
 }
-minaf::minaf(int x, int y, char trablist[]) {
+minaf::minaf(int x, int y, char trablist[], int cost) {
     this->lvl=1;
+    this->cost=cost;
+    this->recursos=0;
     this->x = x;
     this->y = y;
     this->cap=100;
@@ -29,8 +31,10 @@ minaf::~minaf() {
 }
 
 
-minc::minc(int x, int y, char trablist[]) {
+minc::minc(int x, int y, char trablist[], int cost) {
     this->lvl=1;
+    this->cost=cost;
+    this->recursos=0;
     this->x = x;
     this->y = y;
     this->cap=100;
@@ -46,7 +50,9 @@ minc::~minc() {
 
 }
 
-central::central(int x, int y, char trablist[]) {
+central::central(int x, int y, char trablist[], int cost) {
+    this->recursos=0;
+    this->cost=cost;
     this->x = x;
     this->y = y;
     this->cap=100;
@@ -61,7 +67,9 @@ central::~central() {
 
 }
 
-bat::bat(int x, int y, char trablist[]) {
+bat::bat(int x, int y, char trablist[], int cost) {
+    this->recursos=0;
+    this->cost=cost;
     this->x = x;
     this->y = y;
     this->cap=100;
@@ -76,7 +84,9 @@ bat::~bat() {
 
 }
 
-fund::fund(int x, int y, char *trablist) {
+fund::fund(int x, int y, char *trablist, int cost) {
+    this->recursos=0;
+    this->cost=cost;
     this->x = x;
     this->y = y;
     this->name = "bat ";
@@ -90,7 +100,9 @@ fund::~fund(){
 
 }
 
-edx::edx(int x, int y, char *trablist) {
+edx::edx(int x, int y, char *trablist, int cost) {
+    this->recursos=0;
+    this->cost=cost;
     this->x = x;
     this->y = y;
     this->name = "edx ";

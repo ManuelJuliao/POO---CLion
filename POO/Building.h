@@ -14,11 +14,13 @@ class Building {
 public:
     int lvl;
     int cap; // capacidade
+    int recursos;
     int power; // 0 ou 1. on or off
     int x,y; // coor
     float perc; // probabilidade de desabar
     string name; // name
     char trab[50]; //string trabalhadores
+    int cost;
 
     Building();
     ~Building();
@@ -29,42 +31,42 @@ public:
 class minaf : public Building {
 
 public:
-    minaf(int x,int y, char trablist[]);
+    minaf(int x,int y, char trablist[], int cost);
     ~minaf();
 };
 
 class minc : public Building {
 
 public:
-    minc(int x,int y, char trablist[]);
+    minc(int x,int y, char trablist[], int cost);
     ~minc();
 };
 
 class central : public Building {
 
 public:
-    central(int x, int y, char trablist[]);
+    central(int x, int y, char trablist[], int cost);
     ~central();
 };
 
 class bat : public Building {
 
 public:
-    bat(int x, int y, char trablist[]);
+    bat(int x, int y, char trablist[], int cost);
     ~bat();
 };
 
 class fund : public Building {
 
 public:
-    fund(int x, int y, char trablist[]);
+    fund(int x, int y, char trablist[], int cost);
     ~fund();
 };
 
-class edx : public Building {
+class edx : public Building { //serraçao
 
 public:
-    edx(int x, int y, char trablist[]);
+    edx(int x, int y, char trablist[], int cost);
     ~edx();
 };
 

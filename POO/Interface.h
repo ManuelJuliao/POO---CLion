@@ -10,7 +10,7 @@
 #define INTERFACE_H
 
 #include <string>
-#include <stdio.h>
+#include <cstdio>
 #include <iostream>
 #include "Ilha.h"
 #include <vector>
@@ -51,6 +51,7 @@ void coor();
 void print();
 void menu();
 void night(vector<Ilha> *mapa, Player *player1, vector<Worker> *workers,vector<Building> *buildings);
+void dawn(vector<Ilha> *mapa, Player *player1, vector<Worker> *workers, vector<Building> *buildings);
 
 Interface();
 ~Interface();

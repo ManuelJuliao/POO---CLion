@@ -86,12 +86,6 @@
 		<Unit filename="/Users/manueljuliao/Desktop/POO - CLion/POO/Building.h">
 			<Option target="POO"/>
 		</Unit>
-		<Unit filename="/Users/manueljuliao/Desktop/POO - CLion/POO/Finance.cpp">
-			<Option target="POO"/>
-		</Unit>
-		<Unit filename="/Users/manueljuliao/Desktop/POO - CLion/POO/Finance.h">
-			<Option target="POO"/>
-		</Unit>
 		<Unit filename="/Users/manueljuliao/Desktop/POO - CLion/POO/Ilha.cpp">
 			<Option target="POO"/>
 		</Unit>

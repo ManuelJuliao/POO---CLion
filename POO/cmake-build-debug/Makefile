@@ -169,33 +169,6 @@ Building.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/POO.dir/build.make CMakeFiles/POO.dir/Building.cpp.s
 .PHONY : Building.cpp.s
 
-Finance.o: Finance.cpp.o
-
-.PHONY : Finance.o
-
-# target to build an object file
-Finance.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/POO.dir/build.make CMakeFiles/POO.dir/Finance.cpp.o
-.PHONY : Finance.cpp.o
-
-Finance.i: Finance.cpp.i
-
-.PHONY : Finance.i
-
-# target to preprocess a source file
-Finance.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/POO.dir/build.make CMakeFiles/POO.dir/Finance.cpp.i
-.PHONY : Finance.cpp.i
-
-Finance.s: Finance.cpp.s
-
-.PHONY : Finance.s
-
-# target to generate assembly for a file
-Finance.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/POO.dir/build.make CMakeFiles/POO.dir/Finance.cpp.s
-.PHONY : Finance.cpp.s
-
 Ilha.o: Ilha.cpp.o
 
 .PHONY : Ilha.o
@@ -370,9 +343,6 @@ help:
 	@echo "... Building.o"
 	@echo "... Building.i"
 	@echo "... Building.s"
-	@echo "... Finance.o"
-	@echo "... Finance.i"
-	@echo "... Finance.s"
 	@echo "... Ilha.o"
 	@echo "... Ilha.i"
 	@echo "... Ilha.s"

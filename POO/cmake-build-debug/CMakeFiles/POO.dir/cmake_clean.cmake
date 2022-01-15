@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/POO.dir/Building.cpp.o"
-  "CMakeFiles/POO.dir/Finance.cpp.o"
   "CMakeFiles/POO.dir/Ilha.cpp.o"
   "CMakeFiles/POO.dir/Interface.cpp.o"
   "CMakeFiles/POO.dir/Jogada.cpp.o"

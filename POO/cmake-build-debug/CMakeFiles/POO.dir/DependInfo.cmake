@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/manueljuliao/Desktop/POO - CLion/POO/Building.cpp" "/Users/manueljuliao/Desktop/POO - CLion/POO/cmake-build-debug/CMakeFiles/POO.dir/Building.cpp.o"
-  "/Users/manueljuliao/Desktop/POO - CLion/POO/Finance.cpp" "/Users/manueljuliao/Desktop/POO - CLion/POO/cmake-build-debug/CMakeFiles/POO.dir/Finance.cpp.o"
   "/Users/manueljuliao/Desktop/POO - CLion/POO/Ilha.cpp" "/Users/manueljuliao/Desktop/POO - CLion/POO/cmake-build-debug/CMakeFiles/POO.dir/Ilha.cpp.o"
   "/Users/manueljuliao/Desktop/POO - CLion/POO/Interface.cpp" "/Users/manueljuliao/Desktop/POO - CLion/POO/cmake-build-debug/CMakeFiles/POO.dir/Interface.cpp.o"
   "/Users/manueljuliao/Desktop/POO - CLion/POO/Jogada.cpp" "/Users/manueljuliao/Desktop/POO - CLion/POO/cmake-build-debug/CMakeFiles/POO.dir/Jogada.cpp.o"

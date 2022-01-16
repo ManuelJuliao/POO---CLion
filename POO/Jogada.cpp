@@ -269,8 +269,8 @@ void Jogada::joga2(string comm, string p1, vector<Ilha> *arr, vector<Worker> *wo
 int Jogada::joga3(string comm, string p1, string p2, vector<Ilha> *arr, vector<Building> *build){
     int x = stoi(p1);
     int y = stoi(p2);
-    int flag=0;
-    vector<Ilha>::iterator ptr;
+    int flag=1;
+    //vector<Ilha>::iterator ptr;
     vector<Building>::iterator ptr2;
 
     for(ptr2 = build->begin(); ptr2 < build->end(); ptr2++){
@@ -278,12 +278,12 @@ int Jogada::joga3(string comm, string p1, string p2, vector<Ilha> *arr, vector<B
             if(ptr2->name == "MnF " || ptr2->name == "MnC ") {
                 for (int i = 0; i < sizeof(ptr2->trab); i++) {
                     if (ptr2->trab[i] == 'M') {
+                        flag=0;
                         ptr2->power = 1;
                         break;
                     }
                 }
                 if(ptr2->power == 0) {
-                    flag = 1;
                     cout << "Requer trabalhador" << endl;
                 }
             }
@@ -291,11 +291,9 @@ int Jogada::joga3(string comm, string p1, string p2, vector<Ilha> *arr, vector<B
                 ptr2->power = 1;
             }
         }
-        else{
-            flag = 1;
-            cout << "Nao existe edificio" << endl;
-            break;
-        }
+    }
+    if(flag==1){
+        cout << "Nao existe edificio" << endl;
     }
 
     return flag;
@@ -380,6 +378,7 @@ int Jogada::joga5(string comm, string p1, string p2, string p3, vector<Ilha> *ar
                         break;
                     }
                 }
+                break;
             }
         }
 
@@ -415,12 +414,12 @@ int Jogada::joga6(string comm, string p1, string p2, vector<Ilha> *arr, struct c
         int y = stoi(p2);
         for (ptr = arr->begin(); ptr < arr->end(); ptr++){
             if (ptr->x == x && ptr->y == y){
-                ptr->edif = '    ';
+                ptr->edif = "    ";
             }
         }
         for (ptr2 = build->begin(); ptr2 < build->end(); ptr2++){
             if (ptr2->x == x && ptr2->y == y){
-                // add resource to player
+                player1->iron += ptr2->recursos;
                 build->erase(ptr2);
             }
         }
@@ -484,6 +483,7 @@ int Jogada::joga6(string comm, string p1, string p2, vector<Ilha> *arr, struct c
         }
 
     }
+    return flag;
 
     //cout << "Jogada 6" << endl;
 
@@ -557,6 +557,7 @@ int Jogada::joga7(string comm, string p1, vector<Ilha> *arr, vector<Worker> *wor
 
         }
         cont_id++;
+        player1->ntrab = cont_id;
     }
 
     return flag;
@@ -571,11 +572,11 @@ int Jogada::joga8(string comm, string p1, string p2, vector<Ilha> *arr, struct c
     
     if(p1.empty()){
         cout << "Dados de jogo" << endl;
-        cout <<  "Minas de ferro: " << controlo->minaf << "\tFerro: " << player1->iron << "\tProducao: " << player1->ironprod << endl;
-        cout <<  "Minas de carvao: " << controlo->minc << "\tCarvao: " << player1->coal << "\tProducao: " << player1->coalprod << endl;
+        cout <<  "Minas de ferro: " << controlo->minaf << "\tFerro: " << player1->iron << endl;
+        cout <<  "Minas de carvao: " << controlo->minc << "\tCarvao: " << player1->coal << endl;
         cout <<  "Centrais eletricas: " << controlo->central << "\tEnergia: " << player1->energy  << endl;
         cout <<  "Baterias: " << controlo->bat << "\tEnergia: " << player1->iron <<  endl;
-        cout <<  "Fundicoes: " << controlo->fund << "\tAco: " << player1->iron << "\tProducao: " << player1->ironprod << endl;
+        cout <<  "Fundicoes: " << controlo->fund << "\tAco: " << player1->iron << endl;
         cout <<  "Edificios X (Armazem): " << controlo->edx << endl;
 
         flag=1;

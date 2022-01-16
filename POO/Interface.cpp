@@ -316,16 +316,47 @@ void Interface::menu(){
 }
 
 void Interface::night(vector<Ilha> *mapa, Player *player1, vector<Worker> *workers, vector<Building> *buildings) {
+    vector<Worker>::iterator ptr;
     player1->calcprod(mapa, player1, buildings);
-    player1->prod(player1);
+    player1->prod(player1, buildings);
     cout << endl << "Dia: " << day << endl << "Dinheiro: " <<player1->money << endl << "Ferro: " << player1->iron << endl << "Barras de aco: " << player1->steel << endl << "Carvao: " << player1->coal << endl << "Madeira: " << player1->wood << endl << "Vigas de madeira: " << player1->woodbeams << endl << "Eletricidade: " << player1->energy << endl;
+    cout << endl << player1->ntrab << " Trabalhadores" << endl;
+    cout << "Tipo" << "\tNome" << "\tID"<< endl;
+    for(ptr = workers->begin(); ptr < workers->end(); ptr++){
+        cout << ptr->c << "\t" << ptr->name << "\t" << ptr->id << endl;
+    }
     //amanhecer -> update recursos etc
 
 
 }
 
 void Interface::dawn(vector<Ilha> *mapa, Player *player1, vector<Worker> *workers, vector<Building> *buildings){
+    vector<Ilha>::iterator ptr;
+    vector<Building>::iterator ptr2;
 
+    for(ptr = mapa->begin(); ptr < mapa->end(); ptr++){
+        if(ptr->zona == "flr "){
+            if(ptr->trees < ptr->maxtree){
+                ptr->trees += 1;
+            }
+        }
+        if(ptr->zona == "mnt "){
+            ptr->storage += ptr->prod;
+        }
+        if(ptr->zona == "pnt "){
+            if(ptr->edif != "    "){
+                ptr->maxday--;
+            }
+            if(ptr->maxday == 0){
+                ptr->edif = "    ";
+                for (ptr2 = buildings->begin(); ptr2 < buildings->end(); ptr2++){
+                    if (ptr2->x == ptr->x && ptr2->y == ptr->y){
+                        buildings->erase(ptr2);
+                    }
+                }
+            }
+        }
+    }
 
 }
 

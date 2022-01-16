@@ -13,19 +13,15 @@ class Player {
 public :             // variaveis e devidas producoes por ronda
     int money;
     int iron;
-    int ironprod;
     int steel;
-    int steelprod;
     int coal;
-    int coalprod;
     int wood;
-    int woodprod;
     int woodbeams;
     int energy;
-    int energyprod;
+    int ntrab;
 
     static void calcprod(vector<Ilha> *arr, Player *player1, vector<Building> *build);
-    static void prod(Player *player1);
+    static void prod(Player *player1, vector<Building> *build);
 
     Player();
     ~Player();

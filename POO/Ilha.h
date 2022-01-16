@@ -27,6 +27,12 @@ public:
     string edif;
     char trab[50]; //string trabalhadores
     int num_trab;
+    int trees;
+    int maxtree;
+    float prod;
+    int storage;
+    int maxday;
+
     Ilha ();
     ~Ilha();
     
@@ -35,7 +41,7 @@ public:
 class floresta : public Ilha {
 
 public:
-    int trees;
+
     floresta();
     ~floresta();
 };
@@ -59,8 +65,7 @@ class montanha : public Ilha {
 
 public:
     int mul;
-    float prod;
-    int storage;
+
     float prob;
     montanha();
     ~montanha();
@@ -69,7 +74,6 @@ public:
 class pantano : public Ilha {
 
 public:
-    int maxday;
 
     pantano();
     ~pantano();

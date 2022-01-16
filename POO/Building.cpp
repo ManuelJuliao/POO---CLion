@@ -5,7 +5,7 @@
 #include "Building.h"
 
 Building::Building(){
-
+    int prod;
 }
 
 Building::~Building() {

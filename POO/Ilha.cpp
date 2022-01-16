@@ -35,6 +35,7 @@ floresta::floresta() {
         this->trab[i]= ' ';
     }
     this->trees = rand() % 40 + 20; //entre 20 e 40 arvores
+    this->maxtree = 100;
 
 }
 

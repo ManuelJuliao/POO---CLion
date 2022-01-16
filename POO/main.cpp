@@ -9,10 +9,12 @@
 #include "Ilha.h"
 #include "Interface.h"
 #include "Player.h"
+#include <time.h>
 using namespace std;
 
 
 int main() {
+    srand(time(NULL));
     Interface anInterface;
     //ilha newilha;
     //anInterface.print_ilha();

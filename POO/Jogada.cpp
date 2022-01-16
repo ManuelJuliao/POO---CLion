@@ -188,15 +188,17 @@ int Jogada::joga1(string comm, string p1, string p2, string p3, vector<Ilha> *ar
 }
 void Jogada::joga2(string comm, string p1, vector<Ilha> *arr, vector<Worker> *work, int dia, vector<Building> *build, struct controlo *controlo, Player *player1){
     string play, p2, p3;
-    string path = "/Users/manueljuliao/desktop/poo/";
+    string path = "/Users/manueljuliao/Desktop/POO - CLion/POO";
     string fullpath;
     fullpath = path + p1;
     vector<string> read;
     int p;
     ifstream ReadFile;
+
+
     
     //ReadFile.open(fullpath);
-    ReadFile.open("text.txt", ios::in);
+    ReadFile.open("test.txt", ios::in);
     if (ReadFile) {
         while (!ReadFile.eof())
             play.push_back(ReadFile.get());
@@ -205,9 +207,9 @@ void Jogada::joga2(string comm, string p1, vector<Ilha> *arr, vector<Worker> *wo
     //  read.push_back(play);}
     //getline(ReadFile, play);
     ReadFile.close();
-    //istringstream iss(play);
-    //iss >> comm >> p1 >> p2 >> p3;
-    
+    istringstream iss(play);
+    iss >> comm >> p1 >> p2 >> p3;
+
     p = valida(comm);
     
     switch (p) {
@@ -263,7 +265,7 @@ void Jogada::joga2(string comm, string p1, vector<Ilha> *arr, vector<Worker> *wo
     }
     
     
-    cout << "Jogada 2" << endl;
+    //cout << "Jogada 2" << endl;
 }
 
 int Jogada::joga3(string comm, string p1, string p2, vector<Ilha> *arr, vector<Building> *build){
@@ -420,6 +422,7 @@ int Jogada::joga6(string comm, string p1, string p2, vector<Ilha> *arr, struct c
         for (ptr2 = build->begin(); ptr2 < build->end(); ptr2++){
             if (ptr2->x == x && ptr2->y == y){
                 player1->iron += ptr2->recursos;
+                player1->money += ptr2->cost;
                 build->erase(ptr2);
             }
         }

@@ -17,6 +17,7 @@ Player::Player() {
     this->wood=0;
     this->woodbeams=0;
     this->energy=0;
+    this->ntrab=0;
 }
 
 Player::~Player(){

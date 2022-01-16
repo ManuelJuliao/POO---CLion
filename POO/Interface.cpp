@@ -229,6 +229,7 @@ void Interface::menu(){
             p1.clear();
             p2.clear();
             p3.clear();
+            dawn(&mapa, &player1, &workers, &buildings);
             cout << "Ordem: ";
             cin.clear();
             getline(cin >> ws, fullcomm);
@@ -347,8 +348,9 @@ void Interface::dawn(vector<Ilha> *mapa, Player *player1, vector<Worker> *worker
             if(ptr->edif != "    "){
                 ptr->maxday--;
             }
-            if(ptr->maxday == 0){
+            if(ptr->maxday == 8){
                 ptr->edif = "    ";
+                ptr->maxday = 10;
                 for (ptr2 = buildings->begin(); ptr2 < buildings->end(); ptr2++){
                     if (ptr2->x == ptr->x && ptr2->y == ptr->y){
                         buildings->erase(ptr2);
